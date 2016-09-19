@@ -20,7 +20,7 @@
 
 
 #define MAX_CONNECTIONS    (1000)
-#define MAX_LINE           (1000)
+#define MAX_LINE           (30000)
 #define MAXLEN 1024
 #define NUM_CHILDREN 3
 
@@ -85,4 +85,5 @@ int main()
           free (buffer);
       }
     }
+	while (waitpid(-1, NULL, 0) > 0);
 }

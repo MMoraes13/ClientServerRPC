@@ -20,7 +20,7 @@
 
 
 #define MAX_CONNECTIONS    (1000)
-#define MAX_LINE           (1000)
+#define MAX_LINE           (300000)
 
 int main()
 {
@@ -57,6 +57,7 @@ int main()
           close(new);
           counter++;
           printf("here2\n");
+
           continue;
       }
       else if(pid == 0)

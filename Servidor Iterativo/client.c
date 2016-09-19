@@ -4,7 +4,7 @@
 #include <arpa/inet.h>
 #include <string.h>
 
-#define BUF_SIZE 	(1000)
+#define BUF_SIZE 	(50000)
 
 int main(int narg, char *varg[])
 {
@@ -52,7 +52,7 @@ int main(int narg, char *varg[])
     }    
 
     fprintf(fp, "%s", buf);
-    printf ("received from server %d bytes:%s", recv_len, buf);
+    printf ("received from server %d bytes", recv_len);
     close(socketfd);
     fclose (fp);
     return 0;
